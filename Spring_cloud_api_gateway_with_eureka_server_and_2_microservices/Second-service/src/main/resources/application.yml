@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Second-Service
+    
+server:  port: 3002
+  
+eureka:  client:    service-url:      defaultZone: http://localhost:3000/eureka
