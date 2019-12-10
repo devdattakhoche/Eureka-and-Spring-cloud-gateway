@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: First-service
+server:  port: 9001

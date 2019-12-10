@@ -1,0 +1,4 @@
+server:  port: 9000  spring:  cloud:    gateway:      routes:      - id: employeeModule        uri: http://localhost:9001/        predicates:        - Path=/employee/**      - id: consumerModule        uri: http://localhost:9002/        predicates:        - Path=/consumer/**
+
+
+   
