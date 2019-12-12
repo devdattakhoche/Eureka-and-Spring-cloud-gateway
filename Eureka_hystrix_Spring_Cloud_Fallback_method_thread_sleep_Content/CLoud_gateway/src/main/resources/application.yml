@@ -1,0 +1,19 @@
+server:
+  port: 2003
+eureka:  client:    register-with-eureka: true
+    fetch-registry: true
+    service-url:      defaultZone: http://localhost:2000/eureka
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: employeeModule
+        uri: http://localhost:2002/
+        predicates:
+        - Path=/e/**
+      - id: consumerModule
+        uri: http://localhost:2004/
+        predicates:
+        - Path=/c/**          application:    name: Gateway
+        
+                  
